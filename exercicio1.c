@@ -1,29 +1,37 @@
-// Criar um programa que:
+// Leia um número inteiro e mostre:
 
-// receba 2 números
-// calcule a soma
-// mostre o resultado
+// "Positivo" se for maior que zero
+// "Negativo" se for menor que zero
+// "Zero" se for igual a zero
+// 2. Maior de idade
 
 #include <stdio.h>
-
-// Dados 
-int numero1 ;
-int numero2 ;
-
-// Operação
-int soma ; 
-
 int main() {
-    printf("Digite o primeiro número: ");
-    scanf("%d", &numero1);
 
-    printf("Digite o segundo número: ");
-    scanf("%d", &numero2);
+//Dados
+int numero ;
 
-    soma = numero1 + numero2;
+// Entrada de dados
+printf("Digite um número inteiro: ");
+scanf("%d", &numero);
 
-    // Resultado
-    printf("A soma dos números é: %d\n", soma);
+printf("--------------------------------\n");
 
+//Resultado - O resultado esta acima da estrutura de decisão, pois a decisão será mostrada independete do número ser P/N/0
+printf("O número digitado é: %d\n", numero);
+
+// Positivo, se for maior que zero
+if (numero > 0) {
+    printf("Numero maior que 0: Positivo\n");
+
+// Negativo, se for menor que zero
+} else if (numero < 0) {
+    printf("Número menor que 0: Negativo \n");
+
+// Zero, se for igual a zero
+} else {
+    printf("O número é igual a Zero\n");
+
+}
     return 0;
 }
